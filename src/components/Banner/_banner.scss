@@ -1,0 +1,23 @@
+.hero {
+  margin: 0 100px 40px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 1);
+  height: 223px;
+  &_image {
+    border-radius: 25px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+  }
+  &_title {
+    font-size: 48px;
+    font-weight: 500;
+    position: absolute;
+    color: white;
+  }
+}
