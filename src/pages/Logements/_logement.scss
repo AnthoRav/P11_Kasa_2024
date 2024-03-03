@@ -1,0 +1,8 @@
+.infos_container {
+  margin: 0 100px;
+}
+.infos_logement {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 20px;
+}

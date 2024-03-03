@@ -1,13 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Error from "./pages/Error/Error";
-//import LodgingCard from './pages/LodgingCard/LodgingCard'
+import Logement from "./pages/Logements/Logement";
 import About from "./pages/About/About";
 
 function Router() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/logements/:id" element={<Logement />} />
       <Route path="/about" element={<About />} />
       <Route path="/*" element={<Error />} />
     </Routes>

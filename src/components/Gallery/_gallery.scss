@@ -1,9 +1,8 @@
 .gallery {
   background-color: $secondary-color;
   border-radius: 25px 25px 0 0;
-  display: flex;
+  @include flexmid;
   flex-wrap: wrap;
-  justify-content: center;
   width: 1240px;
   margin: auto;
   gap: 50px;
