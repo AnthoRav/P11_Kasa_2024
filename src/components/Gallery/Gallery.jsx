@@ -6,7 +6,12 @@ function Gallery() {
   return (
     <div className="gallery">
       {Logements.map((logement) => (
-        <Card id={logement.id} cover={logement.cover} title={logement.title} />
+        <Card
+          key={logement.id}
+          id={logement.id}
+          cover={logement.cover}
+          title={logement.title}
+        />
       ))}
     </div>
   );

@@ -11,7 +11,7 @@ function About() {
         alt="vue d'un cours d'eau avec des montagnes enneigées en arrière plan"
         title=""
       />
-      <div className="collapse">
+      <div className="collapseContainer">
         <Collapse
           title="Fiabilité"
           content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes 

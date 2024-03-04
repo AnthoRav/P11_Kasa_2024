@@ -1,10 +1,10 @@
 import React from "react";
 
-function Tags({ logement }) {
+function Tags({ infosTag }) {
   return (
     <div className="tags_section">
-      {logement.tags.map((tag) => (
-        <div className="tags_section-tag" key={tag + logement.id}>
+      {infosTag.tags.map((tag) => (
+        <div className="tags_section-tag" key={tag + infosTag.id}>
           {tag}
         </div>
       ))}

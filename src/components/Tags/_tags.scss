@@ -1,5 +1,6 @@
 .tags_section {
   display: flex;
+  align-items: center;
   gap: 10px;
   &-tag {
     @include flexmid;

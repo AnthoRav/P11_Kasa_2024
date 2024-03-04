@@ -1,8 +1,16 @@
-.infos_container {
+.location {
   margin: 0 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .infos_logement {
   display: grid;
   grid-template-columns: 4fr 1fr;
   gap: 20px;
+}
+.collapseLogement {
+  display: flex;
+  gap: 70px;
+  font-size: 18px;
 }
