@@ -4,26 +4,30 @@ import EmptyStar from "../../assets/empty_star.png";
 
 function Rate({ infos }) {
   const scaleRating = infos.rating;
-  const rating = [];
+  const stars = [];
+
   for (let i = 1; i <= 5; i++) {
+    let starSrc, starAlt;
+
     if (i <= scaleRating) {
-      rating[i] = true;
+      starSrc = FullStar;
+      starAlt = "étoile pleine";
     } else {
-      rating[i] = false;
+      starSrc = EmptyStar;
+      starAlt = "étoile vide";
     }
+
+    stars.push(
+      <img
+        className="rating_star"
+        key={infos.id + i}
+        src={starSrc}
+        alt={starAlt}
+      />
+    );
   }
-  return (
-    <div className="rating">
-      {rating.map((stars, index) => (
-        <img
-          className="rating_star"
-          key={stars + infos.id + index}
-          src={stars ? FullStar : EmptyStar}
-          alt={stars ? "étoile pleine" : "étoile vide"}
-        />
-      ))}
-    </div>
-  );
+
+  return <div className="rating">{stars}</div>;
 }
 
 export default Rate;
