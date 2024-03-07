@@ -24,13 +24,17 @@
     column-gap: 57px;
     font-size: 24px;
     font-weight: 500;
+    @media screen and (max-width: 335px) {
+      flex-direction: column;
+      gap: 10px;
+    }
     @media screen and (max-width: map-get($breakpoints, mobile)) {
       font-size: 12px;
-      column-gap: 10px;
+      column-gap: 30px;
       text-transform: uppercase;
     }
     @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
-      column-gap: 25px;
+      column-gap: 35px;
       font-size: 18px;
     }
     &-link {
@@ -38,6 +42,7 @@
       color: $black-color;
     }
     &-link:hover {
+      @include effect;
       text-decoration: underline;
       color: $primary-color;
     }

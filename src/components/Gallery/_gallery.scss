@@ -34,6 +34,10 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    @media screen and (max-width: 335px) {
+      width: 280px;
+      height: 255px;
+    }
     @media screen and (max-width: map-get($breakpoints, mobile)) {
       max-width: 335px;
       height: 255px;
