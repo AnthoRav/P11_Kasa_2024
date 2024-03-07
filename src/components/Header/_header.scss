@@ -3,17 +3,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    margin: 20px 20px 20px 20px;
+  }
+  @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+    margin: 30px 50px 30px 50px;
+  }
   &_logo {
     @media screen and (max-width: map-get($breakpoints, mobile)) {
-      display: block;
       width: 145px;
       height: 47px;
-      transform: scale(0.8);
-      margin-left: -15px;
-      margin-bottom: 5px;
-      padding-bottom: 10px;
     }
-
     @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
       width: 180px;
       height: 58px;
@@ -24,6 +24,15 @@
     column-gap: 57px;
     font-size: 24px;
     font-weight: 500;
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      font-size: 12px;
+      column-gap: 10px;
+      text-transform: uppercase;
+    }
+    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+      column-gap: 25px;
+      font-size: 18px;
+    }
     &-link {
       text-decoration-line: none;
       color: $black-color;
@@ -32,18 +41,5 @@
       text-decoration: underline;
       color: $primary-color;
     }
-  }
-  @media screen and (max-width: map-get($breakpoints, mobile)) {
-    width: 90%;
-    margin: 20px auto -19px;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
-    margin: 20px 20px 0 20px;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, breakhome)) {
-    margin-left: 125px;
-    margin-right: 125px;
   }
 }

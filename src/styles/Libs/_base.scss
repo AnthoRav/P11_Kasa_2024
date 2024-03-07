@@ -9,8 +9,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .main {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 50px;
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    gap: 22px;
+  }
+  @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+    gap: 35px;
+  }
 }
 code {
   font-family: "Montserrat", source-code-pro, Menlo, Monaco, Consolas,
