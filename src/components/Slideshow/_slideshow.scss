@@ -32,3 +32,57 @@
     color: $white-color;
   }
 }
+
+@media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+  .sliderContainer {
+    height: 345px;
+  }
+  .slider {
+    height: 345px;
+    border-radius: 15px;
+    &_image {
+      height: 345px;
+      border-radius: 15px;
+    }
+    &_number {
+      bottom: 16px;
+      font-size: 16px;
+    }
+    &_leftArrow {
+      top: 38%;
+      left: 10px;
+    }
+    &_rightArrow {
+      top: 38%;
+      right: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile)) {
+  .sliderContainer {
+    height: 255px;
+  }
+  .slider {
+    height: 255px;
+    border-radius: 10px;
+    &_image {
+      height: 255px;
+      border-radius: 10px;
+    }
+    &_number {
+      bottom: 10px;
+      font-size: 14px;
+    }
+    &_leftArrow {
+      height: 40px;
+      top: 45%;
+      left: 0px;
+    }
+    &_rightArrow {
+      height: 40px;
+      top: 45%;
+      right: 0px;
+    }
+  }
+}

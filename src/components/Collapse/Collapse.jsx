@@ -10,13 +10,18 @@ function Collapse({ title, content }) {
         {title}
         <img className="collapse_arrow" src={Arrow} alt="flèche du haut" />
       </div>
-      <div className="collapse_content open">{content}</div>
+      <div className={isOpen ? "collapse_content" : "collapse_content-hidden"}>
+        {content}
+      </div>
     </div>
   ) : (
     <div className="collapse">
       <div className="collapse_titre" onClick={() => setIsOpen(true)}>
         {title}
         <img className="collapse_arrow--up" src={Arrow} alt="flèche du bas" />
+      </div>
+      <div className={isOpen ? "collapse_content" : "collapse_content-hidden"}>
+        {content}
       </div>
     </div>
   );

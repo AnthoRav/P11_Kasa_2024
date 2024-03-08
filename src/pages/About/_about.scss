@@ -1,0 +1,18 @@
+.collapseContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin: 50px 210px 0 210px;
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    margin: 50px 20px 0 20px;
+    gap: 20px;
+  }
+  @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+    margin: 50px 50px 0 50px;
+    gap: 20px;
+  }
+  @media screen and (min-width: map-get($breakpoints, tablette)) and (max-width: map-get($breakpoints, desktop)) {
+    margin: 50px 100px 0 100px;
+  }
+}

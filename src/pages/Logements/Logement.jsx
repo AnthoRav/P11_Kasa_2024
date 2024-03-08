@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Logements from "../../logements.json";
 import Collapse from "../../components/Collapse/Collapse";
 import NameAndLocation from "../../components/NameAndLocation/NameAndLocation";
@@ -7,16 +7,18 @@ import Tags from "../../components/Tags/Tags";
 import Host from "../../components/Host/Host";
 import Rate from "../../components/Rate/Rate";
 import Slideshow from "../../components/Slideshow/Slideshow";
+import Error from "../Error/Error";
 
 function Logement() {
   let { id } = useParams();
-  const navigate = useNavigate();
+  const [logement, setLogement] = useState({});
   useEffect(() => {
     let logement = Logements.find((logement) => id === logement.id);
-    if (!logement) {
-      navigate("/*");
-    }
+    setLogement(logement);
   });
+  if (!logement) {
+    return <Error />;
+  }
   return (
     <div>
       {Logements.filter((logement) => logement.id === id).map((logement) => (

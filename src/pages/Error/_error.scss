@@ -1,5 +1,5 @@
 .container {
-  margin: 100px 100px 150px 100px;
+  margin: 120px 100px;
   @include flexmid;
   flex-direction: column;
   gap: 150px;
@@ -26,15 +26,15 @@
     }
   }
 }
-@media (min-width: 481px) and (max-width: 1024px) {
+@media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
   .container {
-    margin: 100px 100px 150px 100px;
+    margin: 120px 80px;
+    gap: 120px;
     &_titre {
       font-size: 192px;
     }
     &_text {
       font-size: 27px;
-      margin-bottom: 140px;
     }
     &_link {
       font-size: 16px;
@@ -42,15 +42,15 @@
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: map-get($breakpoints, mobile)) {
   .container {
-    margin: 120px 50px 150px 50px;
+    margin: 120px 40px;
+    gap: 90px;
     &_titre {
       font-size: 96px;
     }
     &_text {
       font-size: 18px;
-      margin-bottom: 100px;
     }
     &_link {
       font-size: 14px;

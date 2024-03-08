@@ -7,9 +7,9 @@ import About from "./pages/About/About";
 function Router() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
       <Route path="/logements/:id" element={<Logement />} />
       <Route path="/about" element={<About />} />
+      <Route path="/" element={<Home />} />
       <Route path="/*" element={<Error />} />
     </Routes>
   );

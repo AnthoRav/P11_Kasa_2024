@@ -3,6 +3,12 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    margin: 0 20px;
+  }
+  @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+    margin: 0 50px;
+  }
 }
 .infos_logement {
   display: grid;
@@ -12,4 +18,11 @@
 .collapseLogement {
   display: flex;
   gap: 70px;
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    flex-direction: column;
+    gap: 20px;
+  }
+  @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+    gap: 20px;
+  }
 }
