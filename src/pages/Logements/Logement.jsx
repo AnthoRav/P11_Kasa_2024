@@ -25,13 +25,17 @@ function Logement() {
         <div key={logement.id} className="location">
           <Slideshow key={logement.id} slides={logement.pictures} />
           <div className="infos_logement">
-            <NameAndLocation
-              title={logement.title}
-              location={logement.location}
-            />
-            <Host owner={logement} />
-            <Tags infosTag={logement} />
-            <Rate infos={logement} />
+            <div className="infos_logement-left">
+              <NameAndLocation
+                title={logement.title}
+                location={logement.location}
+              />
+              <Tags infosTag={logement} />
+            </div>
+            <div className="infos_logement-right">
+              <Host owner={logement} />
+              <Rate infos={logement} />
+            </div>
           </div>
           <div className="collapseLogement">
             <Collapse

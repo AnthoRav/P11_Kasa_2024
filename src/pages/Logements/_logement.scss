@@ -5,15 +5,36 @@
   gap: 20px;
   @media screen and (max-width: map-get($breakpoints, mobile)) {
     margin: 0 20px;
+    gap: 10px;
   }
   @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
     margin: 0 50px;
   }
 }
 .infos_logement {
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 630px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+  @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+  }
+  &-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media screen and (max-width: 630px) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 }
 .collapseLogement {
   display: flex;

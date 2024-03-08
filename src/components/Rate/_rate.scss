@@ -4,5 +4,11 @@
   align-items: center;
   &_star {
     width: 32px;
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      width: 20px;
+    }
+    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+      width: 24px;
+    }
   }
 }

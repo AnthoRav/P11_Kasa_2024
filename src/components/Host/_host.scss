@@ -9,10 +9,24 @@
     font-weight: 500;
     color: $primary-color;
     text-align: end;
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      font-size: 12px;
+    }
+    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+      font-size: 16px;
+    }
   }
   &_picture {
     height: 64px;
     width: 64px;
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      height: 32px;
+      width: 32px;
+    }
+    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+      height: 50px;
+      width: 50px;
+    }
     &-radius {
       border-radius: 100px;
     }
