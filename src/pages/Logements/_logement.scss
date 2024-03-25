@@ -16,7 +16,6 @@
   justify-content: space-between;
   @media screen and (max-width: 630px) {
     flex-direction: column;
-    gap: 10px;
   }
   @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
   }

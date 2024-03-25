@@ -14,9 +14,9 @@ function Logement() {
   const [logement, setLogement] = useState({});
   useEffect(() => {
     let logement = Logements.find((logement) => id === logement.id);
-    setLogement(logement);
-  });
-  if (!logement) {
+    setLogement(logement ? logement : {});
+  }, [id]);
+  if (Object.keys(logement).length === 0) {
     return <Error />;
   }
   return (

@@ -1,22 +1,14 @@
 .collapse {
   width: 100%;
-  &_titre {
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 47px;
-    background-color: $primary-color;
-    border-radius: 10px;
-    font-size: 24px;
-    font-weight: 500;
-    color: $white-color;
-    padding: 0 18px;
+  &_about {
+    @include collapseBase;
   }
-  &_titre:checked ~ .collapse_content {
-    max-height: 100vh;
+  &_logement {
+    @include collapseBase;
+    font-size: 18px;
   }
   &_content {
+    position: relative;
     color: $black-color;
     font-size: 18px;
     font-weight: 400;
@@ -28,48 +20,56 @@
     border-radius: 4px;
     visibility: visible;
     opacity: 1;
-    height: auto;
-    transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out,
-      height 0.5s ease-in-out;
-    &-hidden {
-      visibility: hidden;
-      opacity: 0;
-      height: 0;
-    }
-  }
-  &_arrow {
-    transform: rotate(0deg);
-    transition: all 0.4s;
-    cursor: pointer;
-    &--up {
-      transform: rotate(180deg);
-      transition: all 0.4s;
-      cursor: pointer;
-    }
+    margin-top: -45px;
+    z-index: -1;
+    //height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease-in-out, margin-top 0.5s ease-in-out;
   }
 }
+.open {
+  margin-top: -6px;
+  max-height: 400px;
+  transition: max-height 0.6s ease-in-out, margin-top 0.5s ease-in-out;
+}
+.collapse .chevron-up {
+  transition: all 0.5s ease-in-out;
+}
+.collapse.open .chevron-up {
+  transform: rotate(-180deg);
+}
+
 @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
   .collapse {
-    &_titre {
+    &_about {
       border-radius: 5px;
       font-size: 20px;
       height: 40px;
     }
+    &_logement {
+      border-radius: 5px;
+      font-size: 16px;
+      height: 40px;
+    }
     &_content {
-      font-size: 18px;
+      font-size: 15px;
     }
-    &_arrow {
-      height: 24px;
-      &--up {
-        height: 24px;
-      }
-    }
+  }
+  .chevron-up {
+    width: 20px;
   }
 }
 
 @media screen and (max-width: map-get($breakpoints, mobile)) {
   .collapse {
-    &_titre {
+    &_about {
+      border-radius: 5px;
+      font-size: 13px;
+      height: 30px;
+      padding: 0 12px;
+    }
+    &_logement {
       border-radius: 5px;
       font-size: 13px;
       height: 30px;
@@ -79,11 +79,8 @@
       font-size: 12px;
       padding: 18px 12px;
     }
-    &_arrow {
-      height: 20px;
-      &--up {
-        height: 20px;
-      }
-    }
+  }
+  .chevron-up {
+    width: 16px;
   }
 }

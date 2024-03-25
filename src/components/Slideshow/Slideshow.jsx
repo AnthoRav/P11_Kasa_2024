@@ -29,8 +29,8 @@ function Slideshow({ slides }) {
         />
       </div>
       <img
-        src={slides.length === 1 ? null : leftArrow}
-        alt={slides.length === 1 ? null : "flèche gauche"}
+        src={slides.length === 1 ? "" : leftArrow}
+        alt={slides.length === 1 ? "" : "flèche gauche"}
         className="slider_leftArrow"
         onClick={goToPrevious}
       />
