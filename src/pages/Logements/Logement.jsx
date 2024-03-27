@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+// @ts-nocheck
+import React from "react";
 import { useParams } from "react-router-dom";
 import Logements from "../../logements.json";
 import Collapse from "../../components/Collapse/Collapse";
@@ -11,48 +12,41 @@ import Error from "../Error/Error";
 
 function Logement() {
   let { id } = useParams();
-  const [logement, setLogement] = useState({});
-  useEffect(() => {
-    let logement = Logements.find((logement) => id === logement.id);
-    setLogement(logement ? logement : {});
-  }, [id]);
+  // Trouver directement le logement en utilisant l'ID des paramètres de l'URL.
+  const logement = Logements.find((logement) => id === logement.id) || {};
+
+  // Retourner le composant Error si aucun logement n'est trouvé
   if (Object.keys(logement).length === 0) {
     return <Error />;
   }
+
   return (
     <div>
-      {Logements.filter((logement) => logement.id === id).map((logement) => (
-        <div key={logement.id} className="location">
-          <Slideshow key={logement.id} slides={logement.pictures} />
-          <div className="infos_logement">
-            <div className="infos_logement-left">
-              <NameAndLocation
-                title={logement.title}
-                location={logement.location}
-              />
-              <Tags infosTag={logement} />
-            </div>
-            <div className="infos_logement-right">
-              <Host owner={logement} />
-              <Rate infos={logement} />
-            </div>
+      <div className="location">
+        <Slideshow slides={logement.pictures} />
+        <div className="infos_logement">
+          <div className="infos_logement-left">
+            <NameAndLocation
+              title={logement.title}
+              location={logement.location}
+            />
+            <Tags infosTag={logement} />
           </div>
-          <div className="collapseLogement">
-            <Collapse
-              key={logement.description}
-              title="Description"
-              content={logement.description}
-            />
-            <Collapse
-              key={`logement.equipments`}
-              title="Equipements"
-              content={logement.equipments.map((equipments) => (
-                <div key={equipments + logement.id}>{equipments}</div>
-              ))}
-            />
+          <div className="infos_logement-right">
+            <Host owner={logement} />
+            <Rate infos={logement} />
           </div>
         </div>
-      ))}
+        <div className="collapseLogement">
+          <Collapse title="Description" content={logement.description} />
+          <Collapse
+            title="Equipements"
+            content={logement.equipments.map((equipment) => (
+              <div key={equipment}>{equipment}</div>
+            ))}
+          />
+        </div>
+      </div>
     </div>
   );
 }
