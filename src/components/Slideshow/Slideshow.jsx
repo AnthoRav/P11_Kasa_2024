@@ -34,7 +34,7 @@ function Slideshow({ slides }) {
         className="slider_leftArrow"
         onClick={goToPrevious}
       />
-      <div className="slider_number">
+      <div className={slides.length === 1 ? "slider_hidden" : "slider_number"}>
         {currentIndex + 1}/{slides.length}
       </div>
       <img

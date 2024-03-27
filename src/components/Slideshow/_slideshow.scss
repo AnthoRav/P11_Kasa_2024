@@ -31,6 +31,9 @@
     font-weight: 500;
     color: $white-color;
   }
+  &_hidden {
+    display: none;
+  }
 }
 
 @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
