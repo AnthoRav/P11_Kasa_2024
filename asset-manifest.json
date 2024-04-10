@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/AnthoRav/P11_Kasa_2024/static/css/main.b0647cae.css",
-    "main.js": "/AnthoRav/P11_Kasa_2024/static/js/main.c5ad2ad7.js",
-    "static/js/453.522bce99.chunk.js": "/AnthoRav/P11_Kasa_2024/static/js/453.522bce99.chunk.js",
-    "static/media/banner_about2.jpeg": "/AnthoRav/P11_Kasa_2024/static/media/banner_about2.796d007cebdd47cc489b.jpeg",
-    "static/media/banner_img2.jpeg": "/AnthoRav/P11_Kasa_2024/static/media/banner_img2.0f820b85d9a6a7e177b3.jpeg",
-    "index.html": "/AnthoRav/P11_Kasa_2024/index.html",
-    "main.b0647cae.css.map": "/AnthoRav/P11_Kasa_2024/static/css/main.b0647cae.css.map",
-    "main.c5ad2ad7.js.map": "/AnthoRav/P11_Kasa_2024/static/js/main.c5ad2ad7.js.map",
-    "453.522bce99.chunk.js.map": "/AnthoRav/P11_Kasa_2024/static/js/453.522bce99.chunk.js.map"
+    "main.css": "/P11_Kasa_2024/static/css/main.b0647cae.css",
+    "main.js": "/P11_Kasa_2024/static/js/main.da4b17c2.js",
+    "static/js/453.522bce99.chunk.js": "/P11_Kasa_2024/static/js/453.522bce99.chunk.js",
+    "static/media/banner_about2.jpeg": "/P11_Kasa_2024/static/media/banner_about2.796d007cebdd47cc489b.jpeg",
+    "static/media/banner_img2.jpeg": "/P11_Kasa_2024/static/media/banner_img2.0f820b85d9a6a7e177b3.jpeg",
+    "index.html": "/P11_Kasa_2024/index.html",
+    "main.b0647cae.css.map": "/P11_Kasa_2024/static/css/main.b0647cae.css.map",
+    "main.da4b17c2.js.map": "/P11_Kasa_2024/static/js/main.da4b17c2.js.map",
+    "453.522bce99.chunk.js.map": "/P11_Kasa_2024/static/js/453.522bce99.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b0647cae.css",
-    "static/js/main.c5ad2ad7.js"
+    "static/js/main.da4b17c2.js"
   ]
 }
